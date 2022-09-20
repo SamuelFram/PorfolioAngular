@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,14 @@ import { FooterComponent } from './footer/footer.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { DatospersonalesComponent } from './datospersonales/datospersonales.component';
 import { BarraNavegacionComponent } from './barra-navegacion/barra-navegacion.component';
+import { ContactoComponent } from './contacto/contacto.component';
+
+const routes: Routes = [
+  { path: 'contacto', component: ContactoComponent },
+  { path: 'experiencia', component: ExperienciaComponent },
+  { path: 'cursos', component: CursosComponent },
+  { path: '**', redirectTo: '/', pathMatch: 'full' },
+];
 
 @NgModule({
   declarations: [
@@ -18,11 +27,12 @@ import { BarraNavegacionComponent } from './barra-navegacion/barra-navegacion.co
     FooterComponent,
     CursosComponent,
     DatospersonalesComponent,
-    BarraNavegacionComponent
+    BarraNavegacionComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
