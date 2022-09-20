@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 
+//servicios
+import { EquipoService } from './equipo.service';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ExperienciaComponent } from './experiencia/experiencia.component';
@@ -34,7 +37,7 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [EquipoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -18,3 +18,15 @@
       </form>
 </div>
 <br><br><br><br><br><br><br>
+
+<div class="p-5">
+  <h2>Equipo de trabajo</h2>
+<ul class="list-group" >
+  <li class="list-group-item" *ngFor="let item of equipo">
+    <h6>Nombre: {{item.nombre}} </h6>
+    <h6>Especialidad: {{item.especialidad}} </h6>
+    <a href="#">Leer mas..</a>
+  </li>
+</ul>
+</div>
+
